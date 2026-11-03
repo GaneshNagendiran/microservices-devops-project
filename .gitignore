@@ -1,22 +1,105 @@
-# Secrets - never commit real credentials
+
+# ==========================================
+# Secrets and Environment Variables
+# ==========================================
 .env
-*.env
+.env.*
 !.env.example
+*.secret
+secrets/
+credentials/
 
-# Build output
-target/
-*.jar
-!**/.mvn/wrapper/maven-wrapper.jar
-
-# IDE / OS
-.idea/
-*.iml
-.vscode/
-.DS_Store
-HELP.md
-
-# JWT signing keys - never commit these
+# ==========================================
+# Private Keys and Certificates
+# ==========================================
 keys/
 *.pem
+*.key
 *.p12
+*.pfx
 *.jks
+*.keystore
+
+# ==========================================
+# Node.js Dependencies
+# ==========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ==========================================
+# Java / Maven Build Output
+# ==========================================
+target/
+*.jar
+*.war
+*.class
+!**/.mvn/wrapper/maven-wrapper.jar
+
+# ==========================================
+# Build Output and Coverage
+# ==========================================
+build/
+dist/
+coverage/
+.nyc_output/
+
+# ==========================================
+# Terraform Files
+# ==========================================
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# ==========================================
+# Logs and Temporary Files
+# ==========================================
+*.log
+logs/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ==========================================
+# IDE and Editor Files
+# ==========================================
+.idea/
+.vscode/
+*.iml
+*.code-workspace
+
+# ==========================================
+# Operating System Files
+# ==========================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ==========================================
+# Docker Local Overrides
+# ==========================================
+docker-compose.override.yml
+
+# ==========================================
+# Test and Cache Files
+# ==========================================
+.pytest_cache/
+__pycache__/
+*.pyc
+.cache/
+
+# ==========================================
+# Keep Safe Sample Files
+# ==========================================
+!.env.example
+
