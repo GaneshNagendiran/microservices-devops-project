@@ -103,3 +103,7 @@ __pycache__/
 # ==========================================
 !.env.example
 
+
+# Maven POM backup files
+*.pom.backup
+pom.xml.backup
